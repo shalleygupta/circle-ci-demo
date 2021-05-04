@@ -2,8 +2,11 @@ service: serverless
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: dev
-  region: us-east-1
+  stage: test
+  region: ap-south-1
 functions:
   hello:
     handler: src/handler.hello
+    timeout: 60
+    memorySize: 120
+
